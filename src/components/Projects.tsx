@@ -4,35 +4,45 @@ import { motion } from "framer-motion";
 import { ExternalLink, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
-const projects = [
-  {
-    title: "AccountantToolkit",
-    role: "Founder & Developer",
-    description: "Built and maintain a live affiliate publishing site with 63 production pages focusing on software reviews. Engineered SEO-led content architecture.",
-    tech: ["HTML/CSS", "Cloudflare Pages", "GitHub CI/CD"],
-    link: "https://accountanttoolkit.com",
-    metrics: ["Live Production Site", "63+ Pages", "Custom Routing"],
-  },
+type ProjectCard = {
+  title: string;
+  role: string;
+  description: string;
+  tech: string[];
+  link?: string;
+  metrics: string[];
+};
+
+const projects: ProjectCard[] = [
   {
     title: "SiraTrack",
     role: "Full-Stack Developer",
-    description: "A private accountability dashboard with strict single-user discipline flows, streak scoring, recovery plans, and Vitest test coverage.",
-    tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Vitest"],
-    metrics: ["Protected APIs", "Analytics Logic", "CSV Exports"],
+    description: "Private single-user discipline dashboard for strict daily accountability with weekly commitments, recovery plans, and 30-day history.",
+    tech: ["Next.js 16", "TypeScript", "Supabase", "PostgreSQL", "Vitest"],
+    link: "https://siratrack.vercel.app/",
+    metrics: ["10+ API Routes", "CSV Exports", "Streak + Weekly Scoring"],
   },
   {
     title: "Lead Generation Scraper",
     role: "Automation Engineer",
-    description: "Modular scraper architecture with stealth plugins, user-agent rotation, and human-like interaction. Improved verified email coverage by 44%.",
-    tech: ["TypeScript", "Playwright"],
-    metrics: ["22% -> 67% Email Coverage", "100% Phone/Web Coverage", "Anti-detect"],
+    description: "Production-ready modular scraper with anti-detection behavior, retry controls, and enrichment/export pipeline for outreach workflows.",
+    tech: ["TypeScript", "Playwright", "Node.js", "Yelp Fusion API", "OpenStreetMap"],
+    metrics: ["Stealth + UA Rotation", "Exponential Backoff", "JSON/CSV Export + Enrichment"],
   },
   {
-    title: "Nudge MVP",
-    role: "Full-Stack Developer",
-    description: "Behavioral finance application that generates psychological nudges based on spending patterns and subscription detection.",
-    tech: ["Next.js App Router", "TypeScript", "Prisma", "Supabase Auth"],
-    metrics: ["Transaction APIs", "Auth Flows", "Weekly Summaries"],
+    title: "AccountantToolkit",
+    role: "Founder & Developer",
+    description: "Static publishing site with comparison guides and tool reviews for freelancers and bookkeepers, supported by SEO and content-maintenance scripts.",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js Scripts"],
+    link: "https://accountanttoolkit.com",
+    metrics: ["40+ Content Pages", "Static Deploy", "Sitemap + Redirect Rules"],
+  },
+  {
+    title: "LeadGenerator.0.2",
+    role: "Python Developer",
+    description: "Lightweight Python utility that generates outreach leads and template-based personalized email content from lead data.",
+    tech: ["Python", "Markdown Templates"],
+    metrics: ["Template Placeholder Substitution", "CLI Workflow", "Cross-Platform Setup"],
   },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Languages, Mail, MapPin } from "lucide-react";
+import { GraduationCap, Languages, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -17,7 +17,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Let's build something amazing together.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Let&apos;s build something amazing together.</h2>
             <p className="text-foreground/70 text-lg mb-10 max-w-lg">
               Currently pursuing my BS in Computer Science at ISSAT Sousse while actively building and deploying full-stack web applications. 
               Always open to discussing product design, development, or tech opportunities.
