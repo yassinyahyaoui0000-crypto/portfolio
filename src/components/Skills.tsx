@@ -28,14 +28,15 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-black/40">
+    <section id="process" className="border-y border-white/8 py-24">
       <div className="container mx-auto px-6">
-        <div className="mb-16 text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Expertise</h2>
-          <div className="w-20 h-1 bg-primary rounded-full" />
+        <div className="mb-16 flex flex-col items-center text-center">
+          <p className="text-sm uppercase tracking-[0.25em] text-muted mb-4">Process</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">A simple way to move from brief to launch.</h2>
+          <p className="text-foreground/72 max-w-2xl">The stack matters, but it is there to support a bigger promise: clear messaging, strong interface design, reliable frontend delivery, and a process clients can understand quickly.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -43,15 +44,15 @@ export default function Skills() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="glass p-8 rounded-2xl flex flex-col items-center text-center"
+              className="card flex flex-col items-center text-center p-6"
             >
-              <div className="p-4 bg-white/5 rounded-2xl mb-6">
+              <div className="mb-6 rounded-2xl border border-white/8 bg-white/4 p-4" aria-hidden="true">
                 {category.icon}
               </div>
-              <h3 className="text-xl font-bold mb-6">{category.title}</h3>
+              <h3 className="mb-6 text-xl font-semibold">{category.title}</h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {category.skills.map((skill, i) => (
-                  <span key={i} className="px-3 py-1 text-sm bg-white/5 rounded-md text-foreground/80 border border-white/5">
+                  <span key={i} className="rounded-full border border-white/8 bg-white/4 px-3 py-1 text-sm text-foreground/82">
                     {skill}
                   </span>
                 ))}
